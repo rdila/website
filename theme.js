@@ -30,7 +30,6 @@ function nextW() {
     } else {
         idx++;
     }
-
     // Set the document body background to the next wallpaper.
     wp = "url('" + walls[idx] + "')";
     document.body.style.backgroundImage = wp;
