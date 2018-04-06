@@ -24,29 +24,28 @@ img#logo:hover,img#email:hover{
     width: 100%;
     padding: 0px;
 }
-
-    .rTableHead{
-        display: table-cell;
-    }
-    #topbar{
-        height: 4%;
-    }
-    #email{
-        max-width: 100%;
-        height: auto;
-        opacity: 0.84;
-    }
-    #mainbar{
-        width: 100%;
-        height:88%;
-        cursor: pointer;
-    }
-    #bottombar{
-        position: absolute;
-        bottom: 0;
-        height: 12%;
-        background: RGBA(55,102,251,0.12);
-    }
+.rTableHead{
+    display: table-cell;
+}
+#topbar{
+    height: 4%;
+}
+#email{
+    max-width: 100%;
+    height: auto;
+    opacity: 0.84;
+}
+#mainbar{
+    width: 100%;
+    height:88%;
+    cursor: pointer;
+}
+#bottombar{
+    position: absolute;
+    bottom: 0;
+    height: 12%;
+    background: RGBA(55,102,251,0.12);
+}
 .rCardContainer{
     display: none;
     position: fixed;
@@ -58,28 +57,28 @@ img#logo:hover,img#email:hover{
     background: linear-gradient(to left, RGBA(185,232,181,0.9), RGBA(255,255,255,0.55));
     box-shadow: 5px 5px 20px #000;
 }
-    .rCardInfo{
-        display: inline;
-        font-family: Tahoma, Geneva, Verdana;
-        font-size:2.1vh;
-        color: #000;
-        text-align: center;
-    }
-    .rCardLink{
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        font-size: 4vw;
-        color: #FFF;
-        vertical-align: bottom;
-        opacity: 0.77;
-        text-shadow: 1px 1px 2px #000;
-        padding-bottom: 2vh;
-        text-decoration: underline;
-    }
-    .rCardLink:hover{
-        background: RGBA(255,102,51,0.5);
-    }
+.rCardInfo{
+    display: inline;
+    font-family: Tahoma, Geneva, Verdana;
+    font-size:2.1vh;
+    color: #000;
+    text-align: center;
+}
+.rCardLink{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 4vw;
+    color: #FFF;
+    vertical-align: bottom;
+    opacity: 0.77;
+    text-shadow: 1px 1px 2px #000;
+    padding-bottom: 2vh;
+    text-decoration: underline;
+}
+.rCardLink:hover{
+    background: RGBA(255,102,51,0.5);
+}
 .rTableFootCell{
     display: table-cell;
     width: 20%;
