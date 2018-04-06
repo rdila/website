@@ -1,43 +1,40 @@
-var bks = new Array("resources/wlp1.jpg","resources/wlp2.jpg","resources/wlp3.jpg","resources/wlp4.jpg","resources/wlp5.jpg","resources/wlp6.jpg");
+const FOLDER = "resources/";
+
+var walls = new Array(
+    FOLDER + "wlp1.jpg",
+    FOLDER + "wlp2.jpg",
+    FOLDER + "wlp3.jpg",
+    FOLDER + "wlp4.jpg",
+    FOLDER + "wlp5.jpg",
+    FOLDER + "wlp6.jpg");
+
+var arrLen = walls.length-1;
 var wp;
-var newwp;
 var n;
-var res;
-var idx;
-var wpMin = 0;
-var wpMax = 5;
-
-/**********************************
-Set up the array of wallpapers.
-***********************************
-var walls[];
-
-etc...
-
-
-***********************************/
-
+var arrLen;
+var idx = 0;
 
 function nextW() {
+    // Get the current wallpaper and its array position.
     wp = document.body.style.backgroundImage;
-    idx = 0;
+    n = wp.search(FOLDER);
+    wp = wp.substring(n, wp.length-1);
+    wp = wp.replace('"', '');
+    idx = walls.indexOf(wp);
 
-    if (wp == 'undefined') {
-	    newwp = "url('resources/wlp2.jpg')";
+    // Initialize index.
+    if (idx == -1) {idx = 0;};
+    // Start back at the first array item if we're on the last array item. Otherwise increment the array index.
+    if (idx == arrLen) {
+        idx = 0;
     } else {
-        n = wp.search(".jpg");
-        res = Number(wp.substr(n - 1, 1));
-    }
-    if ((Number(res)) == wpMax+1) {
-    	    idx = 1;
-        } else {
-    	    idx = Number(res) + 1;
-    }
-    newwp = "url('resources/wlp" + idx;
-    newwp = newwp.concat(".jpg')");
-    return newwp;
+        idx++;
     }
 
+    // Set the document body background to the next wallpaper.
+    wp = "url('" + walls[idx] + "')";
+    document.body.style.backgroundImage = wp;
+}
 
 $(document).ready(function(){
     $("#bottombar").find("img").css("opacity","0.77");
@@ -79,12 +76,12 @@ $(document).ready(function(){
     $(function(){
         $(twitter).click();
     });
-
     $("#mainbar").dblclick(function(){
-        document.body.style.backgroundImage = nextW();
+        nextW();
     });
     $("#mainbar").click(function(){
-        document.body.style.backgroundImage = nextW();
+        // document.body.style.backgroundImage = nextW2();
+        nextW();
         $("#card").fadeOut(750);
     });
     $("#card").click(function(){
