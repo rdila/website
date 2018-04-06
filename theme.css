@@ -1,0 +1,113 @@
+html{
+    height: 100%;
+    width: 100%;
+}
+body{
+    background: url("resources/wlp1.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+img#logo:hover,img#email:hover{
+    filter: brightness(125%);
+}
+#viz{
+    height: 100%;
+    background: linear-gradient(to top, RGBA(0,0,0,0), RGBA(50,70,100,0.55));
+}
+.rTable{
+    display: table;
+    width: 100%;
+    padding: 0px;
+}
+
+    .rTableHead{
+        display: table-cell;
+    }
+    #topbar{
+        height: 4%;
+    }
+    #email{
+        max-width: 100%;
+        height: auto;
+        opacity: 0.84;
+    }
+    #mainbar{
+        width: 100%;
+        height:88%;
+        cursor: pointer;
+    }
+    #bottombar{
+        position: absolute;
+        bottom: 0;
+        height: 12%;
+        background: RGBA(55,102,251,0.12);
+    }
+.rCardContainer{
+    display: none;
+    position: fixed;
+    bottom: 12%;
+    left: 0px;
+    width: 20%;
+    font-family: Tahoma, Geneva, Verdana;
+    background: RGB(225,230,255);
+    background: linear-gradient(to left, RGBA(185,232,181,0.9), RGBA(255,255,255,0.55));
+    box-shadow: 5px 5px 20px #000;
+}
+    .rCardInfo{
+        display: inline;
+        font-family: Tahoma, Geneva, Verdana;
+        font-size:2.1vh;
+        color: #000;
+        text-align: center;
+    }
+    .rCardLink{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        font-size: 4vw;
+        color: #FFF;
+        vertical-align: bottom;
+        opacity: 0.77;
+        text-shadow: 1px 1px 2px #000;
+        padding-bottom: 2vh;
+        text-decoration: underline;
+    }
+    .rCardLink:hover{
+        background: RGBA(255,102,51,0.5);
+    }
+.rTableFootCell{
+    display: table-cell;
+    width: 20%;
+    background: RGB(0,0,0);
+    background:rgba(0,0,0,0.5);
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 0%;
+    border: 1px dashed RGBA(150,150,50,0.5);
+}
+.rTableFootCell:hover{
+    background: RGB(255,102,51);
+    background: RGBA(255,102,51,0.5);
+    cursor: pointer;
+}
+.footerLink{
+    text-transform: uppercase;
+    color: #FFFFFF;
+    font-size: 3vw;
+    font-weight: bold;
+    text-decoration: none;
+    opacity:0.77;
+}
+a{
+    font-family: Tahoma, Geneva, Verdana;
+    color: RGB(72,61,139);
+    text-decoration: none;
+}
+a:hover{
+    text-decoration:underline;
+}
