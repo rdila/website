@@ -1,4 +1,10 @@
-var bks = new Array("resources/wlp1.jpg","resources/wlp2.jpg","resources/wlp3.jpg","resources/wlp4.jpg","resources/wlp5.jpg","resources/wlp6.jpg");
+var walls = new Array(
+    "resources/wlp1.jpg",
+    "resources/wlp2.jpg",
+    "resources/wlp3.jpg",
+    "resources/wlp4.jpg",
+    "resources/wlp5.jpg",
+    "resources/wlp6.jpg");
 var wp;
 var newwp;
 var n;
@@ -7,23 +13,14 @@ var idx;
 var wpMin = 0;
 var wpMax = 5;
 
-/**********************************
-Set up the array of wallpapers.
-***********************************
-var walls[];
-
-etc...
-
-
-***********************************/
-
+var arrLen;
 
 function nextW() {
     wp = document.body.style.backgroundImage;
     idx = 0;
 
     if (wp == 'undefined') {
-	    newwp = "url('resources/wlp2.jpg')";
+        newwp = "url('resources/wlp2.jpg')";
     } else {
         n = wp.search(".jpg");
         res = Number(wp.substr(n - 1, 1));
@@ -37,6 +34,33 @@ function nextW() {
     newwp = newwp.concat(".jpg')");
     return newwp;
     }
+
+var wIndex = 0;
+function nextW2() {
+    var n;
+    wp = document.body.style.backgroundImage;
+    n = wp.search("resources/");
+    wp = wp.substring(n, wp.length-1);
+
+    // Get current index of wallpaper array.
+    wIndex = walls.indexOf(wp);
+
+    // Get the max size of the wallpaper array.
+    arrLen = walls.length-1;
+
+    // Initialize index.
+    if (wIndex == -1) {wIndex = 0;};
+
+    // Start back at the first array item if we're on the last array item. Otherwise increment the array index.
+    if (wIndex == arrLen) {
+        wIndex = 0;
+    } else {
+        wIndex++;
+    }
+
+    wp = "url('" + walls[wIndex] + "')";
+    document.body.style.backgroundImage = wp;
+}
 
 
 $(document).ready(function(){
@@ -81,10 +105,12 @@ $(document).ready(function(){
     });
 
     $("#mainbar").dblclick(function(){
-        document.body.style.backgroundImage = nextW();
+        // document.body.style.backgroundImage = nextW();
+        nextW2();
     });
     $("#mainbar").click(function(){
-        document.body.style.backgroundImage = nextW();
+        // document.body.style.backgroundImage = nextW2();
+        nextW2();
         $("#card").fadeOut(750);
     });
     $("#card").click(function(){
