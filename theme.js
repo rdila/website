@@ -67,7 +67,7 @@ $(document).ready(function(){
     $("#random").click(function(){
         $("#card").css("display", "block");
         $("#card").css("left","80%");
-        $("#selectedItemText").html("<span class='rCardInfo'><b><a href='http://r.dilawri.com/random' class='rCardLink'>posts &Rang;</a></b></span>");
+        $("#selectedItemText").html("<span class='rCardInfo'><b><a href='/posts/' class='rCardLink'>posts &Rang;</a></b></span>");
 //      Email link
 //      $("#selectedItemText").html("<span><a href='mailto:robin[at]dilawri.com' class='rCardLink'>robin <small>[at]</small><br/>dilawri <small>[dot]</small> com</a></span>");
     });
