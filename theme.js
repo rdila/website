@@ -67,16 +67,22 @@ $(document).ready(function(){
     $("#random").click(function(){
         $("#card").css("display", "block");
         $("#card").css("left","80%");
-        $("#selectedItemText").html("<span class='rCardInfo'><b><a href='mailto:robin[at]dilawri.com' class='rCardLink'>email &Rang;</a></b></span>");
+        $("#selectedItemText").html("<span class='rCardInfo'><b><a href='/posts/' class='rCardLink'>posts &Rang;</a></b></span>");
+//      Email link
+//      $("#selectedItemText").html("<span><a href='mailto:robin[at]dilawri.com' class='rCardLink'>robin <small>[at]</small><br/>dilawri <small>[dot]</small> com</a></span>");
     });
 
-    $("#divPosts").html('<object data="http://www.dilawri.com/posts/" width=100% height=100%/>');
-
+    $(function(){
+        $(twitter).click();
+    });
+    $("#mainbar").dblclick(function(){
+        nextW();
+    });
     $("#mainbar").click(function(){
-        // nextW();
+        // document.body.style.backgroundImage = nextW2();
+        nextW();
         $("#card").fadeOut(750);
     });
-
     $("#card").click(function(){
         $("#card").fadeOut(370);
     });
