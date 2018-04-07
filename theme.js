@@ -36,6 +36,29 @@ function nextW() {
 }
 
 $(document).ready(function(){
+    // Add smooth scrolling to all links
+    $("a").on('click', function(event) {
+
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+        // Prevent default anchor click behavior
+        event.preventDefault();
+
+        // Store hash
+        var hash = this.hash;
+
+        // Using jQuery's animate() method to add smooth page scroll
+        // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+        $('html, body').animate({
+            scrollTop: $(hash).offset().top
+        }, 500, function(){
+   
+            // Add hash (#) to URL when done scrolling (default click behavior)
+            window.location.hash = hash;
+        });
+        } // End if
+    });
+    
     $("#bottombar").find("img").css("opacity","0.77");
 
 /*  CARD/TITLE, IMAGE and TEXT */
@@ -67,19 +90,13 @@ $(document).ready(function(){
     $("#random").click(function(){
         $("#card").css("display", "block");
         $("#card").css("left","80%");
-        $("#selectedItemText").html("<span class='rCardInfo'><b><a href='/posts/' class='rCardLink'>posts &Rang;</a></b></span>");
-//      Email link
-//      $("#selectedItemText").html("<span><a href='mailto:robin[at]dilawri.com' class='rCardLink'>robin <small>[at]</small><br/>dilawri <small>[dot]</small> com</a></span>");
+        $("#selectedItemText").html("<span class='rCardInfo'><b><a href='/posts/home' class='rCardLink'>posts &Rang;</a></b></span>");
     });
 
     $(function(){
         $(twitter).click();
     });
-    $("#mainbar").dblclick(function(){
-        nextW();
-    });
     $("#mainbar").click(function(){
-        // document.body.style.backgroundImage = nextW2();
         nextW();
         $("#card").fadeOut(750);
     });
