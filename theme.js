@@ -52,13 +52,13 @@ $(document).ready(function(){
         $('html, body').animate({
             scrollTop: $(hash).offset().top
         }, 500, function(){
-   
+
             // Add hash (#) to URL when done scrolling (default click behavior)
             window.location.hash = hash;
         });
         } // End if
     });
-    
+
     $("#bottombar").find("img").css("opacity","0.77");
 
 /*  CARD/TITLE, IMAGE and TEXT */
@@ -90,7 +90,7 @@ $(document).ready(function(){
     $("#random").click(function(){
         $("#card").css("display", "block");
         $("#card").css("left","80%");
-        $("#selectedItemText").html("<span class='rCardInfo'><b><a href='/posts/home' class='rCardLink'>posts &Rang;</a></b></span>");
+        $("#selectedItemText").html("<span class='rCardInfo'><b><a href='http://r.dilawri.com/random/' class='rCardLink'>posts &Rang;</a></b></span>");
     });
 
     $(function(){
