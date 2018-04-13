@@ -1,6 +1,7 @@
 const FOLDER = "resources/";
 
 var walls = new Array(
+    FOLDER + "GJG.jpg",
     FOLDER + "wlp1.jpg",
     FOLDER + "wlp2.jpg",
     FOLDER + "wlp3.jpg",
