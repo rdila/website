@@ -29,6 +29,7 @@ img#logo:hover,img#email:hover{
 }
 #topbar{
     height: 4%;
+    border-bottom: 1px dashed #CCC;
 }
 #email{
     max-width: 100%;
