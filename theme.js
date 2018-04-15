@@ -91,7 +91,7 @@ $(document).ready(function(){
     $("#random").click(function(){
         $("#card").css("display", "block");
         $("#card").css("left","80%");
-        $("#selectedItemText").html("<span class='rCardInfo'><b><a href='https://www.dilawri.com/longform/' class='rCardLink'>statuses &Rang;</a></b></span>");
+        $("#selectedItemText").html("<span class='rCardInfo'><b><a href='https://www.dilawri.com/longform/' class='rCardLink'>status &Rang;</a></b></span>");
     });
 
     $(function(){
